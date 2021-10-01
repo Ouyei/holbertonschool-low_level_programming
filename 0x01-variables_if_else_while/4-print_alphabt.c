@@ -12,7 +12,7 @@ int main(void)
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		if (letter != 'e' && letter != 'q')
-			putchar(letter)
+			putchar(letter);
 	}
 
 	putchar('\n');
