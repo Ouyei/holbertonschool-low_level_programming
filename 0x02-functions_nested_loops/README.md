@@ -1,13 +1,13 @@
 # C - Functions, nested loops
 
-In this project, I learned about nested loops, header files, and variable scope
+In this project, we learned about nested loops, header files, and variable scope
 in C while practicing declaring and defining my own functions.
 
-## Tests :heavy_check_mark:
+## Tests ✔️
 
 * [tests](./tests): Folder of test files. Provided by Holberton School.
 
-## Helper File :raised_hands:
+## Helper File ⛑️
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
 
