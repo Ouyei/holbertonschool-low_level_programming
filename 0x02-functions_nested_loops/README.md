@@ -3,9 +3,9 @@
 In this project, we learned about nested loops, header files, and variable scope
 in C while practicing declaring and defining my own functions.
 
-## Tests ✔️
+## Test ✔️
 
-* [tests](./test): Folder of test files. Provided by Holberton School.
+* [test](./test): Folder of test files. Provided by Holberton School.
 
 ## Helper File ⛑️
 
