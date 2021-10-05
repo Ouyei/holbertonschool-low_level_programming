@@ -13,7 +13,7 @@ in C while practicing declaring and defining my own functions.
 
 ## Header File :file_folder:
 
-* [holberton.h](./holberton.h): Header file containing prototypes for all
+* [main.h](./holberton.h): Header file containing prototypes for all
 functions written in the project.
 
 | File                     | Prototype                        |
