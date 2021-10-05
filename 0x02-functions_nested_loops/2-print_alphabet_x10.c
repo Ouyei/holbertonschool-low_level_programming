@@ -3,10 +3,10 @@
 /**
  * print_alphabet_x10 - Print 10 times the alphabet in lowercase
  */
-void print _alphabet_x10(void)
+void print_alphabet_x10(void)
 {
-	in count = 0;
-	cahr letter;
+	int count = 0;
+	char letter;
 
 	while (count++ <= 9)
 	{
