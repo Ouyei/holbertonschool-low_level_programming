@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	putchar('P');
-	putchar('U');
-	putchar('T');
-	putchar('C');
-	putchar('H');
-	putchar('A');
-	putchar('R');
+	_putchar('P');
+	_putchar('U');
+	_putchar('T');
+	_putchar('C');
+	_putchar('H');
+	_putchar('A');
+	_putchar('R');
 
 	return (0);
 }
