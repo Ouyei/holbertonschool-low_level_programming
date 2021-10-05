@@ -5,7 +5,7 @@ in C while practicing declaring and defining my own functions.
 
 ## Tests ✔️
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+* [tests](./test): Folder of test files. Provided by Holberton School.
 
 ## Helper File ⛑️
 
