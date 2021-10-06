@@ -6,7 +6,7 @@
  *
  * Return: 1 if the number is greater tah zero,
  *	0 if the number is zero,
- *	-1 if the number is less tahn zero.
+ *	-1 if the number is less than zero.
  */
 int print_sign(int n)
 {
