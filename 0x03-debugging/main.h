@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/*
+ * File: main.h
+ * Auth: Oscar Bedat
+ * Desc: Header file containing declarations for 0x02. C - Functions, nested loops
+ */
+
 #include <stdio.h>
 
 void positive_or_negative(int i);
