@@ -3,8 +3,8 @@
 
 /*
  * File: main.h
- * Desc: Header file containing prototypes for all functions
- *       used in the 0x03-more_functions_nested_loops directory.
+ * Auth: Oscar Bedat
+ * Desc: Header file containing declarations for 0x04. C - More functions, more nested loops
  */
 
 int _putchar(char c);
