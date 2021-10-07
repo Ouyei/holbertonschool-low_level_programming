@@ -4,7 +4,7 @@
 /*
  * File: main.h
  * Auth: Oscar Bedat
- * Desc: Header file containing declarations for 0x02. C - Functions, nested loops
+ * Desc: Header file containing declarations for 0x03. C - Debugging
  */
 
 #include <stdio.h>
