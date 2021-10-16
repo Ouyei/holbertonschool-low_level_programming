@@ -6,7 +6,7 @@
  * Return: is separ retunr 1, otherwise return 0.
  */
 
-int separ (char c)
+int separ(char c)
 {
 	/*Declare condition switch*/
 	switch (c)
@@ -48,11 +48,5 @@ char *cap_string(char *s)
 		if (s[count] >= 'a' && s[count] <= 'z')
 		{
 			/*Convert uppercase*/
-			if (s[count] == *s || separ(s[count - 1]))
+			if (s[c
 
-				s[count] += uppercase;
-		}
-		count++; /*Add count*/
-	}
-	return (s);
-}
