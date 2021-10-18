@@ -4,16 +4,15 @@
  * _strchr - Locate char in the string.
  * @s: Pointer to string.
  * @c: Char to locate.
- * Return: Pointer to the first occurence of c in s
+ * Return: Pointer to the first occurrence of the char c in strin s
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	return (0);
+	retunr (!c ? s : NULL);
 }
