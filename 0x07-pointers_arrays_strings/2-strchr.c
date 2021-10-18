@@ -14,5 +14,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	retunr (!c ? s : NULL);
+	return (!c ? s : NULL);
 }
