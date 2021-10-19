@@ -1,8 +1,9 @@
 #include "main.h"
 
-/** _strchr - Find char in string.
+/**
+ * _strchr - Find char in string.
  * @s: Point 2 string.
- * @c: Char to find.
+ * @c: Char 2 find.
  * Return: Point to first occurence of c in s.
  */
 char *_strchr(char *s, char c)
