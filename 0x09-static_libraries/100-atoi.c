@@ -2,12 +2,12 @@
 
 /**
  * _isdigit - Checks if char is a digit.
- * @s: Char 2 check.
+ * @c: Char 2 check.
  * Return: 1 if digit, 0 otherwise.
  */
-int _isdigit(char s)
+int _isdigit(int c)
 {
-	return (s >= '0' && s <= '9');
+	return (c >= '0' && c <= '9');
 }
 /**
  * _atoi - Convert a string into a num.
