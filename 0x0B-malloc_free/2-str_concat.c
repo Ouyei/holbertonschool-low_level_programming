@@ -20,10 +20,10 @@ char *str_concat(char *s1, char *s2)
 	if (!conc)
 		return (NULL);
 	conc += len1 + len2;
-	*conc = '\0'; /**Invalid pointer correction**/
+	*conc = '\0';/**Invalid pointer correction**/
 	for (s2--; len2--;)
 		*--conc = *--s2;
 	for (s1--; len1--;)
-		*conc = *--s1;
+		*--conc = *--s1;
 	return (conc);
 }
