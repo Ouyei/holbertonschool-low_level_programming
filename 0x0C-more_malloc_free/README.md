@@ -20,3 +20,10 @@
 > - If malloc fails, then _calloc returns NULL
 > FYI: The standard library provides a different function: calloc. Run man calloc to learn more.
 > #### 3. array_range
+> Write a function that creates an array of integers.
+
+> - Prototype: int *array_range(int min, int max);
+> - The array created should contain all the values from min (included) to max (included), ordered from min to max
+> - Return: the pointer to the newly created array
+> - If min > max, return NULL
+> - If malloc fails, return NULL
