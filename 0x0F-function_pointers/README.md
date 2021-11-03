@@ -76,4 +76,16 @@ Hello, my name is Bob
 Hello, my uppercase name is BOB DYLAN
 root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers#
 ```
+## If you spend too much time thinking about a thing, you'll never get it done
 
+Write a function that executes a function given as a parameter on each element of an array.
+
+* Prototype: `void array_iterator(int *array, size_t size, void (*action)(int));`
+* where `size` is the size of the array
+* and `action` is a pointer to the function you need to use
+
+**Solution:** [1-array_iterator.c](xxxx)
+
+```
+XXXX
+```
