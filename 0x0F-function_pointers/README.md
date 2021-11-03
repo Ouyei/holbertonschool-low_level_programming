@@ -14,7 +14,7 @@ Write a function that prints a name.
 
 * Prototype: `void print_name(char *name, void (*f)(char *));`
 
-**Solution:** [0-print_name.c]
+**Solution:** [0-print_name.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/0-print_name.c)
 
 ```
 root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# cat cat 0-main.c                                cat: cat: No such file or directory
