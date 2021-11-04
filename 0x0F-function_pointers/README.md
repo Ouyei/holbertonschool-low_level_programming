@@ -239,10 +239,25 @@ Write a program that performs simple operations.
 * if the operator is none of the above, print `Error`, followed by a new line, and exit with the status `99`
 * if the user tries to divide (`/` or `%`) by 0, print `Error`, followed by a new line, and exit with the status `100`
 
-**Solution:** [3-main.c](XXXXX), [3-op_functions.c](XXXX), [3-get_op_func.c](XXXX), [3-calc.h](XXX)
+**Solution:** [3-main.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/3-main.c), [3-op_functions.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/3-op_functions.c), [3-get_op_func.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/3-get_op_func.c), [3-calc.h](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/3-calc.h)
 
 ### Compilation and examples
 
 ```
-XXXXXX
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-op_functions.c 3-get_op_func.c -o calc
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1 + 1
+2
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 97 + 1
+98
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1024 / 10
+102
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1024 '*' 98
+100352
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1024 '\*' 98
+Error
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1024 - 98
+926
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./calc 1024 '%' 98
+44
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers#
 ```
