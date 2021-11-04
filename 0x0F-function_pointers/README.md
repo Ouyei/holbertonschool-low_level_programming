@@ -17,7 +17,7 @@ Write a function that prints a name.
 **Solution:** [0-print_name.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/0-print_name.c)
 
 ```
-root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# cat cat 0-main.c                                cat: cat: No such file or directory
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# cat cat 0-main.c
 #include <stdio.h>
 #include "function_pointers.h"
 
@@ -76,7 +76,8 @@ Hello, my name is Bob
 Hello, my uppercase name is BOB DYLAN
 root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers#
 ```
-## If you spend too much time thinking about a thing, you'll never get it done
+
+## 1. If you spend too much time thinking about a thing, you'll never get it done 
 
 Write a function that executes a function given as a parameter on each element of an array.
 
@@ -141,3 +142,107 @@ root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers
 root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers#
 ```
 
+## 2. To hell with circumstances; I create opportunities 
+
+Write a function that searches for an integer.
+
+* Prototype: `int int_index(int *array, int size, int (*cmp)(int));`
+* where `size` is the number of elements in the array `array`
+* `cmp` is a pointer to the function to be used to compare values
+* `int_index` returns the index of the first element for which the `cmp` function does not return `0`
+* If no element matches, return `-1`
+* If size <= `0`, return `-1`
+
+**Solution:** [2-int_index.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x0F-function_pointers/2-main.c)
+
+```
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# cat 2-main.c
+#include <stdio.h>
+#include "function_pointers.h"
+
+/**
+ * is_98 - check if a number is equal to 98
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int is_98(int elem)
+{
+    return (98 == elem);
+}
+
+/**
+ * is_strictly_positive - check if a number is greater than 0
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int is_strictly_positive(int elem)
+{
+    return (elem > 0);
+}
+
+
+/**
+ * abs_is_98 - check if the absolute value of a number is 98
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int abs_is_98(int elem)
+{
+    return (elem == 98 || -elem == 98);
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
+    int index;
+
+    index = int_index(array, 20, is_98);
+    printf("%d\n", index);
+    index = int_index(array, 20, abs_is_98);
+    printf("%d\n", index);
+    index = int_index(array, 20, is_strictly_positive);
+    printf("%d\n", index);
+    return (0);
+}
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-int_index.c -o c
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers# ./c
+2
+1
+2
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x0F-function_pointers#
+```
+
+## 3. A goal is not always meant to be reached, it often serves simply as something to aim at 
+
+Write a program that performs simple operations.
+
+* You are allowed to use the standard library
+* Usage: `calc num1 operator num2`
+* You can assume `num1` and `num2` are integers, so use the `atoi` function to convert them from the string input to `int`
+* `operator` is one of the following:
+    * `+`: addition
+    * `-`: subtraction
+    * `*`: multiplication
+    * `/`: division
+    * `%`: modulo
+* The program prints the result of the operation, followed by a new line
+* You can assume that the result of all operations can be stored in an `int`
+* if the number of arguments is wrong, print `Error`, followed by a new line, and exit with the status `98`
+* if the operator is none of the above, print `Error`, followed by a new line, and exit with the status `99`
+* if the user tries to divide (`/` or `%`) by 0, print `Error`, followed by a new line, and exit with the status `100`
+
+**Solution:** [3-main.c](XXXXX), [3-op_functions.c](XXXX), [3-get_op_func.c](XXXX), [3-calc.h](XXX)
+
+### Compilation and examples
+
+```
+XXXXXX
+```
