@@ -45,6 +45,7 @@ void print_string(va_list ap, char *separator)
 	printf("%s%s", separator, string);
 
 }
+
 /**
  * print_all - Prints out all stuff.
  * @format:  List of types of arguments.
@@ -57,7 +58,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 
 	/*Declaring struct*/
-	format_type fm[] = {
+	format_type print[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
@@ -77,9 +78,9 @@ void print_all(const char * const format, ...)
 		j = 0; /*Reset variable j*/
 		while (j < 4) /*WHILE for data type*/
 		{
-			if (format[i] == *(fm[j]).fm) /*Search match*/
+			if (format[i] == *(print[j]).print) /*Search match*/
 			{
-				fm[j].p(list, separator); /*Assign values*/
+				print[j].p(list, separator); /*Assign values*/
 				separator = ", ";
 
 			}
