@@ -8,20 +8,25 @@
 
 # Tasks
 
-## Beauty is variable, ugliness is constant
+## 0. Beauty is variable, ugliness is constant
 
 Write a function that returns the sum of all its parameters.
 
 * Prototype: `int sum_them_all(const unsigned int n, ...);`
 * If `n == 0`, return `0`
 
-**Solution:** [0-sum_them_all.c](XXXXXXXXX)
+**Solution:** [0-sum_them_all.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x10-variadic_functions/0-sum_them_all.c)
 
 ```
-ZZZZZZZZZZZ
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-sum_them_all.c -o a
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# ./a
+1122
+500
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions#
+
 ```
 
-## To be is to be the value of a variable
+## 1. To be is to be the value of a variable
 
 Write a function that prints numbers, followed by a new line.
 
@@ -32,13 +37,16 @@ Write a function that prints numbers, followed by a new line.
 * If `separator` is `NULL`, don’t print it
 * Print a new line at the end of your function
 
-**Solution:** [1-print_numbers.c](XXXXXX)
+**Solution:** [1-print_numbers.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x10-variadic_functions/1-print_numbers.c)
 
 ```
-XXZZZZZZZ
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-print_numbers.c -o b
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# ./b
+0, 98, -1024, 402
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# 
 ```
 
-## One woman's constant is another woman's variable
+## 2. One woman's constant is another woman's variable
 
 Write a function that prints strings, followed by a new line.
 
@@ -50,13 +58,18 @@ Write a function that prints strings, followed by a new line.
 * If one of the string is NULL, print `(nil)` instead
 * Print a new line at the end of your function
 
-**Solution:** [2-print_strings.c](ZZZZZZXXXXXX)
+**Solution:** [2-print_strings.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x10-variadic_functions/2-print_strings.c)
 
 ```
-ZZZZZXXXXXXXX
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# vim README.md
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-print_strings.c -o c
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions# ./c
+Jay, Django
+root@cb1b0474dcd5:~/holbertonschool-low_level_programming/0x10-variadic_functions#
+
 ```
 
-## To be is a to be the value of a variable
+## 3. To be is a to be the value of a variable
 
 Write a function that prints anything.
 
@@ -82,7 +95,7 @@ Write a function that prints anything.
 XXXZZZZZZZZ
 ```
 
-## Real programmers can write assembly code in any language
+## 4. Real programmers can write assembly code in any language
 
 Write a 64-bit program in assembly that prints `Hello, Holberton`, followed by a new line.
 
