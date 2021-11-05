@@ -10,6 +10,16 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct print - Struct print.
+ * @print: Struct print
+ * @p: The function associated
+ */
+typedef struct print
+{
+	char*print,
+		void (*p)(va_list arg);
+}print_t;
 
 
 #endif
