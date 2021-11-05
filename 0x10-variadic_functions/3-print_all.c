@@ -1,93 +1,84 @@
 #include "variadic_functions.h"
 
 /**
- * print_char - Formats character.
- * @separator: String separator.
- * @ap: Argument pointer.
+ * format_c - Formats character.
+ * @separator: String seprator
+ * @ap: Argument pointer
  */
-void print_char(va_list ap, char *separator)
+void format_c(char *separator, va_list ap)
 {
 	printf("%s%c", separator, va_arg(ap, int));
 }
 
 /**
- * print_int - Formats integer.
+ * format_i - Formats integer
  * @separator: String seprator
  * @ap: Argument pointer
  */
-void print_int(va_list ap, char *separator)
+void format_i(char *separator, va_list ap)
 {
 	printf("%s%d", separator, va_arg(ap, int));
 }
 
 /**
- * print_float - Formats float.
+ * format_f - Formats float
  * @separator: String seprator
  * @ap: Argument pointer
  */
-void print_float(va_list ap, char *separator)
+void format_f(char *separator, va_list ap)
 {
 	printf("%s%f", separator, va_arg(ap, double));
 }
 
 /**
- * print_string - Formats string.
+ * format_s - Formats string
  * @separator: String seprator
- * @ap: Argument pointer.
+ * @ap: Argument pointer
  */
-void print_string(va_list ap, char *separator)
+void format_s(char *separator, va_list ap)
 {
-	char *string;
+	char *str = va_arg(ap, char *);
 
-	string = va_arg(ap, char *);
-	if (string == NULL)
-		string = "(nil)";
-	printf("%s%s", separator, string);
+	switch ((int)(!str))
+		case 1:
+			str = "(nil)";
 
+	printf("%s%s", separator, str);
 }
 
 /**
- * print_all - Prints out all stuff.
- * @format:  List of types of arguments.
+ * print_all - Prints anything
+ * @format: Format string
  */
-
 void print_all(const char * const format, ...)
 {
-	char *separator;
-	int i, j;
-	va_list list;
-
-	/*Declaring struct*/
-	format_type print[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"f", print_f},
-		{"s", print_s},
+	va_list x;
+	int i = 0, j;
+	char *separator = "";
+	
+	print_t print[] = {
+		{"c", format_c},
+		{"i", format_i},
+		{"f", format_f},
+		{"s", format_s},
 		{NULL, NULL}
 	};
 
-	/* initialize va_list for num number of arguments */
-	va_start(list, format);
-
-	separator = "";
-
-	/*Start WHILE*/
-	i = 0;
-	while (format != NULL && format[i] != '\0')
+	va_start(x, format);
+	while (format && format[i])
 	{
-		j = 0; /*Reset variable j*/
-		while (j < 4) /*WHILE for data type*/
+		j = 0;
+		while (print[j].print)
 		{
-			if (format[i] == *(print[j]).print) /*Search match*/
+			if (format[i] == print[j].print[0])
 			{
-				print[j].p(list, separator); /*Assign values*/
+				print[j].p(separator, x);
 				separator = ", ";
-
 			}
 			j++;
 		}
 		i++;
-	} /*End WHILE*/
-	printf("\n"); /*New line*/
-	va_end(list); /* Clean memory reserved for va_list */
+	}
+	printf("\n");
+	va_end(x);
 }
