@@ -19,6 +19,7 @@ void print_all(const char * const format, ...);
 typedef struct print
 {
 	char *print;
-	void (*p)(char *, va_list);
+	void (*p)(char*, va_list x);
 } print_t;
+
 #endif
