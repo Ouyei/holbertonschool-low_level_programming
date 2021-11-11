@@ -13,12 +13,10 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new_l;
 	unsigned int lenght = 0;
 
-	while (str[lenght])
-		lenght++;
-
 	new_l = malloc(sizeof(list_t));
 	if (!new_l)
 		return (NULL);
+	for (; str[lenght]; lenght++);
 
 	new_l->str = strdup(str); /**the source string to be duplicated and returns the pointer to a newly copied string**/
 	new_l->len = lenght;
