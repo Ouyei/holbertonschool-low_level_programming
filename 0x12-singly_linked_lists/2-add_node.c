@@ -11,17 +11,18 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_l;
-	long int lenght = 0; /**a whole integer whose range is greater than or equal to that of a standard integer on the same machine**/
+	unsigned int length = 0;
+
+	while (str[length])
+		length++;
 
 	new_l = malloc(sizeof(list_t));
 	if (!new_l)
 		return (NULL);
-	for (; str[lenght]; lenght++);
-
-	new_l->str = strdup(str); /**the source string to be duplicated and returns the pointer to a newly copied string**/
-	new_l->len = lenght;
-	new_l->next = *head;
-	*head = new_l;
+	new_l->str = strdup(str);/**the source string to be duplicated and returns the pointer to a newly copied string**/
+	new_l->len = length;
+	new_l->next = (*head);
+	(*head) = new_l;
 
 	return (*head);
 }
