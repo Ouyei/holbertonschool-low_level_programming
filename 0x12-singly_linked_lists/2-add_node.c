@@ -18,7 +18,7 @@ list_t *add_node(list_t **head, const char *str)
 		len++;
 
 	new_l = malloc(sizeof(list_t));
-	if (!new)
+	if (!new_l)
 		return (NULL);
 
 	new_l->str = strdup(str);/**the source string to be duplicated and returns the pointer to a newly copied string**/
