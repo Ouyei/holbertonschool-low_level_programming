@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!new_l)
 		return (NULL);
 
-	new_l->str = strdup(str);/**the source string to be duplicated and returns the pointer to a newly copied string**/
+	new_l->str = strdup(str);
 	new_l->len = len;
 	new_l->next = (*head);
 	(*head) = new_l;
