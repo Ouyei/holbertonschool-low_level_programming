@@ -217,7 +217,61 @@ Write a function that frees a `listint_t` list.
 **Solution:** [4-free_listint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/4-free_listint.c)
 
 ```
-ZXXXZZXXZZXZXXZZXXZ
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# cat 4-main.c
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    free_listint(head);
+    head = NULL;
+    return (0);
+}
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 3-add_nodeint_end.c 0-print_listint.c 4-free_listint.c -o e
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# valgrind ./e
+==2326== Memcheck, a memory error detector
+==2326== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2326== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2326== Command: ./e
+==2326==
+0
+1
+2
+3
+4
+98
+402
+1024
+==2326==
+==2326== HEAP SUMMARY:
+==2326==     in use at exit: 0 bytes in 0 blocks
+==2326==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==2326==
+==2326== All heap blocks were freed -- no leaks are possible
+==2326==
+==2326== For lists of detected and suppressed errors, rerun with: -s
+==2326== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test#
+
 ```
 
 ## 5. Free 
@@ -230,7 +284,62 @@ Write a function that frees a `listint_t` list.
 **Solution:** [5-free_listint2.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/5-free_listint2.c)
 
 ```
-ZZXXZZXXZXZXZZXZXXZ
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# cat 5-main.c
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    free_listint2(&head);
+    printf("%p\n", (void *)head);
+    return (0);
+}
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c -o f
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# valgrind ./f
+==2341== Memcheck, a memory error detector
+==2341== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2341== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2341== Command: ./f
+==2341==
+0
+1
+2
+3
+4
+98
+402
+1024
+(nil)
+==2341==
+==2341== HEAP SUMMARY:
+==2341==     in use at exit: 0 bytes in 0 blocks
+==2341==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==2341==
+==2341== All heap blocks were freed -- no leaks are possible
+==2341==
+==2341== For lists of detected and suppressed errors, rerun with: -s
+==2341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test#
+
 ```
 
 ## 6. Pop 
@@ -240,10 +349,86 @@ Write a function that deletes the head node of a `listint_t` linked list, and re
 * Prototype: `int pop_listint(listint_t **head);`
 * if the linked list is empty return `0`
 
-**Solution:** [6-pop_listint.c](ZZXZXXZZXXZXZXZXZXZZX)
+**Solution:** [6-pop_listint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/6-pop_listint.c)
 
 ```
-ZZXXZZXXZXZXZZXZXXZ
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# cat 6-main.c
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    int n;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
+    print_listint(head);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
+    print_listint(head);
+    free_listint2(&head);
+    printf("%p\n", (void *)head);
+    return (0);
+}
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 6-pop_listint.c -o g
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# valgrind ./g
+==2362== Memcheck, a memory error detector
+==2362== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2362== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2362== Command: ./g
+==2362==
+0
+1
+2
+3
+4
+98
+402
+1024
+- 0
+1
+2
+3
+4
+98
+402
+1024
+- 1
+2
+3
+4
+98
+402
+1024
+(nil)
+==2362==
+==2362== HEAP SUMMARY:
+==2362==     in use at exit: 0 bytes in 0 blocks
+==2362==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==2362==
+==2362== All heap blocks were freed -- no leaks are possible
+==2362==
+==2362== For lists of detected and suppressed errors, rerun with: -s
+==2362== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test#
 ```
 
 ## 7. Get node at index 
