@@ -16,7 +16,7 @@ Write a function that prints all the elements of a listint_t list.
 * Format: see example
 * You are allowed to use `printf`
 
-**Solution:** [0-print_listint.c](ZXZXXZXZXZXZXZ)
+**Solution:** [0-print_listint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/0-print_listint.c)
 
 ```
 ZXZXXZXZXXZXZXZXZZX
@@ -28,7 +28,7 @@ Write a function that returns the number of elements in a linked `listint_t` lis
 
 * Prototype: `size_t listint_len(const listint_t *h);`
 
-**Solution:** [1-listint_len.c](ZXZXXZXZZXZZXXZZX)
+**Solution:** [1-listint_len.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/1-listint_len.c)
 
 ```
 ZXXZXZZZXXZXZXZXZXZXZXZ
@@ -41,7 +41,7 @@ Write a function that adds a new node at the beginning of a `listint_t` list.
 * Prototype: `listint_t *add_nodeint(listint_t **head, const int n);`
 * Return: the address of the new element, or `NULL` if it failed
 
-**Solution:** [2-add_nodeint.c](ZXXZZXXZXZXZZX)
+**Solution:** [2-add_nodeint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/2-add_nodeint.c)
 
 ```
 ZXZXZZXZXXZZXZXXZXZ
@@ -54,7 +54,7 @@ Write a function that adds a new node at the end of a `listint_t` list.
 * Prototype: `listint_t *add_nodeint_end(listint_t **head, const int n);`
 * Return: the address of the new element, or `NULL` if it failed
 
-**Solution:** [3-add_nodeint_end.c](ZXZXXZXXZXZXXZ)
+**Solution:** [3-add_nodeint_end.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/3-add_nodeint_end.c)
 
 ```
 ZXZXXZXZXZZZXXZXZ
@@ -66,7 +66,7 @@ Write a function that frees a `listint_t` list.
 
 * Prototype: `void free_listint(listint_t *head);`
 
-**Solution:** [4-free_listint.c](>ZXzXZXZXZXXZZXXZZXXZ)
+**Solution:** [4-free_listint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/4-free_listint.c)
 
 ```
 ZXXXZZXXZZXZXXZZXXZ
@@ -79,7 +79,7 @@ Write a function that frees a `listint_t` list.
 * Prototype: `void free_listint2(listint_t **head);`
 * The function sets the `head` to `NULL`
 
-**Solution:** [5-free_listint2.c](>ZXzXZXZXZXXZZXXZZXXZ)
+**Solution:** [5-free_listint2.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/5-free_listint2.c)
 
 ```
 ZZXXZZXXZXZXZZXZXXZ
