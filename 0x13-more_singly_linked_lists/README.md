@@ -616,7 +616,7 @@ Write a function that deletes the node at index index of a `listint_t` linked li
 * where `index` is the index of the node that should be deleted. Index starts at `0`
 * Returns: ``1`` if it succeeded, ``-1`` if it failed
 
-**Solution:** [10-delete_nodeint.c](ZXZXXZXZXZXZXZXZ)
+**Solution:** [10-delete_nodeint.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x13-more_singly_linked_lists/10-delete_nodeint.c)
 
 ```
 root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# cat 10-main.c
