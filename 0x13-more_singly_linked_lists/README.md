@@ -619,5 +619,143 @@ Write a function that deletes the node at index index of a `listint_t` linked li
 **Solution:** [10-delete_nodeint.c](ZXZXXZXZXZXZXZXZ)
 
 ```
-ZXZXZXXZXZXZXZXZXXZXZXZ
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# cat 10-main.c
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 5);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_nodeint_at_index(&head, 0);
+    print_listint(head);
+    return (0);
+}
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 10-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 10-delete_nodeint.c -o k
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test# valgrind ./k
+==3068== Memcheck, a memory error detector
+==3068== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3068== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==3068== Command: ./k
+==3068==
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+402
+1024
+-----------------
+1
+2
+3
+4
+402
+1024
+-----------------
+2
+3
+4
+402
+1024
+-----------------
+3
+4
+402
+1024
+-----------------
+4
+402
+1024
+-----------------
+402
+1024
+-----------------
+1024
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+==3068==
+==3068== HEAP SUMMARY:
+==3068==     in use at exit: 0 bytes in 0 blocks
+==3068==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==3068==
+==3068== All heap blocks were freed -- no leaks are possible
+==3068==
+==3068== For lists of detected and suppressed errors, rerun with: -s
+==3068== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+root@952625f534b7:~/holbertonschool-low_level_programming/0x13-more_singly_linked_lists/test#
 ```
