@@ -9,13 +9,7 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int i; /*bit value*/
-
-	if (index > 63)
-		return (-1);
-	
-	/*iterating number to the right index*/
-	i = (n >> index) & 1;
-
-	return (i);
+if (index > (sizeof(unsigned long int) * 8))
+return (-1);
+return ((n >> index) & 1);
 }
