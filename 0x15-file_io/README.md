@@ -25,10 +25,104 @@ Write a function that reads a text file and prints it to the POSIX standard outp
 * if `filename` is `NULL` return `0`
 * if `write` fails or does not write the expected amount of bytes, return `0`
 
-**Solution:** [0-read_textfile.c](hZZZZZZZZZZZZZZz)
+**Solution:** [0-read_textfile.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x15-file_io/0-read_textfile.c)
 
 ```
-ZZZZZZZZZZZZZZZZZZZZZZZZ
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat Requiescat
+Requiescat
+by Oscar Wilde
+
+Tread lightly, she is near
+Under the snow,
+Speak gently, she can hear
+The daisies grow.
+
+All her bright golden hair
+Tarnished with rust,
+She that was young and fair
+Fallen to dust.
+
+Lily-like, white as snow,
+She hardly knew
+She was a woman, so
+Sweetly she grew.
+
+Coffin-board, heavy stone,
+Lie on her breast,
+I vex my heart alone,
+She is at rest.
+
+Peace, Peace, she cannot hear
+Lyre or sonnet,
+All my life's buried here,
+Heap earth upon it.
+
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat 0-main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    ssize_t n;
+
+    if (ac != 2)
+    {
+        dprintf(2, "Usage: %s filename\n", av[0]);
+        exit(1);
+    }
+    n = read_textfile(av[1], 114);
+    printf("\n(printed chars: %li)\n", n);
+    n = read_textfile(av[1], 1024);
+    printf("\n(printed chars: %li)\n", n);
+    return (0);
+}
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-read_textfile.c -o a
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ./a Requiescat
+Requiescat
+by Oscar Wilde
+
+Tread lightly, she is near
+Under the snow,
+Speak gently, she can hear
+The daisies grow.
+(printed chars: 114)
+Requiescat
+by Oscar Wilde
+
+Tread lightly, she is near
+Under the snow,
+Speak gently, she can hear
+The daisies grow.
+
+All her bright golden hair
+Tarnished with rust,
+She that was young and fair
+Fallen to dust.
+
+Lily-like, white as snow,
+She hardly knew
+She was a woman, so
+Sweetly she grew.
+
+Coffin-board, heavy stone,
+Lie on her breast,
+I vex my heart alone,
+She is at rest.
+
+Peace, Peace, she cannot hear
+Lyre or sonnet,
+All my life's buried here,
+Heap earth upon it.
+
+
+(printed chars: 469)
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test#
 ```
 
 ## 1. Under the snow
@@ -43,10 +137,39 @@ Create a function that creates a file.
 * if `filename` is `NULL` return `-1`
 * if `text_content` is `NULL` create an empty file
 
-**Solution:** [1-create_file.c](ZZZZZZZZZZZZZZZ)
+**Solution:** [1-create_file.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x15-file_io/1-create_file.c)
 
 ```
-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat 1-main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-create_file.c -o b
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ./b hello world
+-> -1)
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ls -l hello
+-rw------- 1 root root 0 Nov 23 04:37 hello
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat hello
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test#
 ```
 
 ## 2. Speak gently, she can hear
@@ -60,10 +183,42 @@ Write a function that appends text at the end of a file.
 * If `filename` is `NULL` return `-1`
 * If `text_content` is `NULL`, do not add anything to the file. Return `1` if the file exists and `-1` if the file does not exist or if you do not have the required permissions to write the file
 
-**Solution:** [2-append_text_to_file.c](ZZZZZZZZZZZZZZZZ)
+**Solution:** [2-append_text_to_file.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x15-file_io/1-create_file.c)
 
 ```
-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat 2-main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = append_text_to_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# echo -n Hello > hello
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ls -l hello
+-rw------- 1 root root 5 Nov 23 04:42 hello
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-append_text_to_file.c -o c
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ./c hello " World!
+> "
+-> 1)
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat hello
+Hello World!
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test#
 ```
 
 ## 3. cp
