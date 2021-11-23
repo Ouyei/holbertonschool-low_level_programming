@@ -241,5 +241,19 @@ Write a program that copies the content of a file to another file.
 **Solution:** [3-cp.c](ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzz)
 
 ```
-ZZZZZZZZZZZZZZZZZZZZZZz
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-cp.c -o cp
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat incitatous
+Why you should think twice before putting pictures on social media.
+(What you always wanted to know about @Incitatous)
+#PrivacyAware
+http://imgur.com/a/Mq1tc
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cp incitatous Incitatous
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# ls -l Incitatous
+-rw-r--r-- 1 root root 158 Nov 23 07:55 Incitatous
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# cat Incitatous
+Why you should think twice before putting pictures on social media.
+(What you always wanted to know about @Incitatous)
+#PrivacyAware
+http://imgur.com/a/Mq1tc
+root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test#
 ```
