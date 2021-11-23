@@ -238,7 +238,7 @@ Write a program that copies the content of a file to another file.
 * You must read `1,024` bytes at a time from the `file_from` to make less system calls. Use a buffer
 * You are allowed to use `dprintf`
 
-**Solution:** [3-cp.c](ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzz)
+**Solution:** [3-cp.c](https://github.com/Ouyei/holbertonschool-low_level_programming/blob/main/0x15-file_io/3-cp.c)
 
 ```
 root@cf87ef314fe4:~/holbertonschool-low_level_programming/0x15-file_io/test# gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-cp.c -o cp
