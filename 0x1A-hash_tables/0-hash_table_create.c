@@ -6,7 +6,6 @@
   * @size: Size of the array.
   * Return: A pointer 2 the newly created hash table.
   */
-
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
@@ -17,6 +16,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/*Allocated memory*/
 	new_table = malloc(sizeof(hash_table_t));
+	/*Handle errors*/
 	if (new_table == NULL)
 		return (NULL);
 
