@@ -2,16 +2,15 @@
 #include <stdlib.h>
 
 /**
- * hash_table_print - prints a hash table
- * @ht: hash table you want to look into
- * Return: void
- */
-
+  * hash_table_print - Prints a hash table.
+  * @ht: The hash table 2 prints.
+  * Return: Nothing.
+  */
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index;
-	hash_node_t *ptr;
-	int first = 1;
+	hash_node_t *elem;
+	int bgnn = 1;
 
 	if (ht == NULL)
 		return;
@@ -19,16 +18,16 @@ void hash_table_print(const hash_table_t *ht)
 
 	for (index = 0; index < ht->size; index++)
 	{
-		for (ptr = ht->array[index]; ptr != NULL; ptr = ptr->next)
+		for (elem = ht->array[index]; elem != NULL; elem = elem->next)
 		{
-			if (first)
+			if (bgnn)
 			{
-				printf("'%s': '%s'", ptr->key, ptr->value);
-				first = 0;
+				printf("'%s': '%s'", elem->key, elem->value);
+				bgnn = 0;
 			}
 
 			else
-				printf(", '%s': '%s'", ptr->key, ptr->value);
+				printf(", '%s': '%s'", elem->key, elem->value);
 		}
 
 	}
